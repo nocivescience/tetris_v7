@@ -116,6 +116,7 @@ function placeTetromino() {
         }
 
         playfield[tetromino.row + row][tetromino.col + col] = tetromino.name;
+        context2.globalAlpha=1
       }
     }
   }
@@ -145,7 +146,7 @@ function showGameOver() {
   gameOver = true;
 
   context2.fillStyle = 'black';
-  context2.globalAlpha = 0.75;
+  context2.globalAlpha = 0.75
   context2.fillRect(0, game.height / 2 - 30, game.width, 60);
 
   context2.globalAlpha = 1;
@@ -255,7 +256,7 @@ function loop() {
     if (++count > 35) {
       tetromino.row++;
       count = 0;
-      context2.globalAlpha =1-tetromino.row/20
+      context2.globalAlpha =1-(tetromino.row-3)/17
       // place piece if it runs into anything
       if (!isValidMove(tetromino.matrix, tetromino.row, tetromino.col)) {
         tetromino.row--;
@@ -303,10 +304,10 @@ document.addEventListener('keydown', function(e) {
   // down arrow key (drop)
   if(e.which === 40) {
     const row = tetromino.row + 1;
-
+    context2.globalAlpha =1-(tetromino.row-3)/17
     if (!isValidMove(tetromino.matrix, row, tetromino.col)) {
       tetromino.row = row - 1;
-
+      
       placeTetromino();
       return;
     }
