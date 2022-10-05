@@ -127,7 +127,7 @@ function placeTetromino() {
 
       // drop every row above this one
       for (let r = row; r >= 0; r--) {
-        for (let c = 0; c < playfield[r].length; c++) {
+        for (let c = 0; c < playfield[r].length; c++) {    //cuando se acaba la secuencia
           playfield[r][c] = playfield[r-1][c];
         }
       }
@@ -259,7 +259,7 @@ function loop() {
       context2.globalAlpha =1-(tetromino.row-3)/17
       // place piece if it runs into anything
       if (!isValidMove(tetromino.matrix, tetromino.row, tetromino.col)) {
-        tetromino.row--;
+        tetromino.row--; //esto es para que se fije pa pieza
         placeTetromino();
       }
     }
