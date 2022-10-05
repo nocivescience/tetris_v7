@@ -5,7 +5,7 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
 // const katakana = 'アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズブヅプエェケセテネヘメレヱゲゼデベペオォコソトノホモヨョロヲゴゾドボポヴッン';
-const latin0 = 'CICLOTRON';
+const latin0 = 'te quiero Claudia';
 const latin=latin0.toLowerCase()+latin0;
 const apruebo='Apruebo';
 const nums = '0123456789';
